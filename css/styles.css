@@ -81,6 +81,7 @@ img {
 
 .link {
     text-decoration: none;
+    cursor: pointer;
 }
 
 /* ===============INHERITED STYLES=============== */
@@ -115,6 +116,10 @@ body {
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
+}
+
+.current {
+    color:var(--color-pressed-state);
 }
 
 /* ===============GENERAL STYLES=============== */
@@ -180,9 +185,29 @@ body {
     background-color: var(--color-pressed-state);
 }
 
+.link-properties {
+    position: relative;
+}
+
 .link-properties:hover,
-.link-properties:focus {
+.link-properties:focus,
+.link-properties:active {
     color: var(--color-pressed-state);
+}
+
+.link-properties.current {
+    color: var(--color-pressed-state);
+}
+
+.link-properties.current::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--color-pressed-state);
 }
 
 /* =============== HEADER STYLES=============== */ 
