@@ -359,14 +359,18 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.hero-img {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-        url(../images/desktop-studio-background-image@1x.jpg);
+        url(../images/img-name.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-color: var(--color-dark);
     max-width: 1440px;
     height: 600px;
+    margin: 0 auto;
 }
 
 .hero-title {
@@ -756,7 +760,7 @@ body {
 }
 
 .modal-close-btn:hover .modal-close-icon,
-.modal-close-btn:hover .modal-close-icon {
+.modal-close-btn:focus .modal-close-icon {
     fill: #ffffff;
 }
 
